@@ -1,0 +1,8 @@
+[package]
+name = "guessing_game" # The name of your project
+version = "0.1.0"
+edition = "2021" # The Rust edition you are using
+
+# The dependencies section lists all external crates your project needs
+[dependencies]
+rand = "0.8.5" # This is the line added by 'cargo add rand'
