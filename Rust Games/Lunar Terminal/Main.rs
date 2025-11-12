@@ -2,7 +2,8 @@ use std::io;
 use std::process::Command; 
 use std::io::Write; 
 
-fn print_credits() { 
+fn print_credits() {
+    println!("");
     println!(" === Lunar 0.0.1 ===");
     println!("=== Copyright 2025 ===");
 }
@@ -18,6 +19,13 @@ fn clear() {
             .status()
             .expect("Failed to clear screen on Unix/Linux/macOS");
     }
+}
+
+fn list_cmd() {
+    println!("Lunar -v / lunar -v -> Prints Credits");
+    println!("clear -> Clears console");
+    println!("exit -> Exits the Lunar Terminal");
+    println!("listcmd -> Lists all commands");
 }
  
 fn main() {
@@ -37,7 +45,8 @@ fn main() {
             "Lunar -v" => print_credits(),
             "lunar -v" => print_credits(),
             "clear" => clear(), 
-            "exit" => break, 
+            "exit" => break,
+            "listcmd" => list_cmd(),
 
             _ => println!("Unknown command: {}", command.trim()),
         }
