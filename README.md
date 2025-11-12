@@ -1,3 +1,3 @@
 # Rusty-Games
 
-Games built in rust. Idk what else to say :/
+**All rust games are built in 100% rust inside the Rust Games folder**
